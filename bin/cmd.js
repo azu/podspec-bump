@@ -32,7 +32,6 @@ var optionator = require('optionator')({
             type: 'String',
             description: 'path to podspec',
             example: 'podspec-bump --path /path/to/example.podspec'
-
         }
     ]
 });

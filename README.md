@@ -24,6 +24,7 @@ Usage: podspec-bump <increment> [options]
   -h, --help              displays help
   -w, --write             write incremented version
   -i, --increment String  Incrementing "major", "minor", or "patch" version; or specify version [default: "patch"]
+  -p, --path String       path to podspec
 ```
 
 default is dry-run(doesn't write to file)
@@ -43,6 +44,15 @@ $ podspec-bump major -w
 # or
 $ podspec-bump -i 1.2.3 -w
 ```
+
+### Specific podspec file
+
+You can use `-p` option
+
+``` shell
+$ podspec-bump -p /path/to/example.podspec
+```
+
 
 ## Contributing
 
