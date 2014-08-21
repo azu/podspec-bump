@@ -1,6 +1,6 @@
 # podspec-bump
 
-Bump command line tools for [CocoaPods](http://cocoapods.org/ "CocoaPods").
+A command line tools to bump podspec version for [CocoaPods](http://cocoapods.org/ "CocoaPods").
 
 ## Feature
 
@@ -35,9 +35,11 @@ If you want to write incremented version to the podspec file, use `-w` option.
 $ podspec-bump -w
 ```
 
-### Incrementing option
+### Incrementing version
 
 Incrementing "major", "minor", or "patch" version; or specify version [default: "patch"]
+
+semver!
 
 ``` shell
 $ podspec-bump major -w
