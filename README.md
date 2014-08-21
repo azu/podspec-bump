@@ -5,6 +5,8 @@ A command line tools to bump podspec version for [CocoaPods](http://cocoapods.or
 ## Feature
 
 - Automatically increments version in `*.podspec`
+- Default is dry-run
+- Dump version in podspec file
 
 ## Installation
 
