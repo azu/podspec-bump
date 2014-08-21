@@ -25,6 +25,14 @@ var optionator = require('optionator')({
             type: 'String',
             description: 'Incrementing "major", "minor", or "patch" version; or specify version [default: "patch"]',
             example: 'podspec-bump -i minor'
+        },
+        {
+            option: 'path',
+            alias: 'p',
+            type: 'String',
+            description: 'path to podspec',
+            example: 'podspec-bump --path /path/to/example.podspec'
+
         }
     ]
 });
@@ -33,15 +41,24 @@ if (options.help) {
     console.log(optionator.generateHelp());
 } else {
     var version = options.increment || options._[0];
-    searcher.searchPodspecFilePath(process.cwd(), function (error, podFilePath) {
-        if (error) {
-            throw error;
-        }
+
+    function bump(podFilePath) {
         var bumper = new PodspecBumper(podFilePath);
         if (options.write) {
             fs.writeFileSync(podFilePath, bumper.bumpVersion(version));
         } else {
             console.log(bumper.bumpVersion(version));
         }
-    })
+    }
+
+    if (options.path) {
+        bump(options.path);
+    } else {
+        searcher.searchPodspecFilePath(process.cwd(), function (error, podFilePath) {
+            if (error) {
+                throw error;
+            }
+            bump(podFilePath)
+        });
+    }
 }
