@@ -33,9 +33,6 @@ if (options.help) {
     console.log(optionator.generateHelp());
 } else {
     var version = options.increment || options._[0];
-    if (version == null) {
-        return console.log(optionator.generateHelp());
-    }
     searcher.searchPodspecFilePath(process.cwd(), function (error, podFilePath) {
         if (error) {
             throw error;
