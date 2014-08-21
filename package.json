@@ -1,33 +1,33 @@
 {
-    "name": "podspec-bump",
-    "description": "podspec(cocoapods) bump tool",
-    "version": "0.0.1",
-    "homepage": "https://github.com/azu/podspec-bump/",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/azu/podspec-bump.git"
-    },
-    "main": "index.js",
-    "bin": "./bin/cmd.js",
-    "scripts": {
-        "test": "mocha test/*.js"
-    },
-    "directories": {
-        "test": "test/"
-    },
-    "author": "azu",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/azu/podspec-bump/issues"
-    },
-    "devDependencies": {
-        "espower-loader": "^0.8.0",
-        "intelli-espower-loader": "^0.3.0",
-        "mocha": "^1.21.4",
-        "power-assert": "^0.8.0"
-    },
-    "dependencies": {
-        "optionator": "^0.4.0",
-        "semver": "^3.0.1"
-    }
+  "name": "podspec-bump",
+  "description": "podspec(cocoapods) bump tool",
+  "version": "0.1.0",
+  "homepage": "https://github.com/azu/podspec-bump/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/podspec-bump.git"
+  },
+  "main": "index.js",
+  "bin": "./bin/cmd.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "directories": {
+    "test": "test/"
+  },
+  "author": "azu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azu/podspec-bump/issues"
+  },
+  "devDependencies": {
+    "espower-loader": "^0.8.0",
+    "intelli-espower-loader": "^0.3.0",
+    "mocha": "^1.21.4",
+    "power-assert": "^0.8.0"
+  },
+  "dependencies": {
+    "optionator": "^0.4.0",
+    "semver": "^3.0.1"
+  }
 }
