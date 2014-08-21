@@ -32,6 +32,12 @@ var optionator = require('optionator')({
             type: 'String',
             description: 'path to podspec',
             example: 'podspec-bump --path /path/to/example.podspec'
+        },
+        {
+            option: 'dump-version',
+            type: 'Boolean',
+            description: 'dump podspec version',
+            example: 'podspec-bump --dump-version'
         }
     ]
 });
@@ -43,7 +49,9 @@ if (options.help) {
 
     function bump(podFilePath) {
         var bumper = new PodspecBumper(podFilePath);
-        if (options.write) {
+        if (options.dumpVersion) {
+            console.log(bumper.getVersion());
+        } else if (options.write) {
             fs.writeFileSync(podFilePath, bumper.bumpVersion(version));
         } else {
             console.log(bumper.bumpVersion(version));

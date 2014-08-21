@@ -39,7 +39,7 @@ $ podspec-bump -w
 
 Incrementing "major", "minor", or "patch" version; or specify version [default: "patch"]
 
-semver!
+[Semantic Versioning](http://semver.org/ "Semantic Versioning")!
 
 ``` shell
 $ podspec-bump major -w
@@ -55,6 +55,14 @@ You can use `-p` option
 $ podspec-bump -p /path/to/example.podspec
 ```
 
+### Dump version
+
+If you want to know podspec version value, use `--dump-version` option.
+
+```
+$ podspec-bump --dump-version 
+0.1.0
+```
 
 ## Contributing
 
