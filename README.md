@@ -64,6 +64,18 @@ $ podspec-bump --dump-version
 0.1.0
 ```
 
+### Automatically trunk push
+
+Automatically release podspec !
+
+``` shell
+podspec-bump -w
+git commit -am "bump `podspec-bump --dump-version`" 
+git tag "`podspec-bump --dump-version`"
+git push --tags
+pod trunk push
+```
+
 ## Contributing
 
 1. Fork it!
