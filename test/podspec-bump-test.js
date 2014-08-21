@@ -5,7 +5,7 @@
 "use strict";
 var assert = require("power-assert");
 var fs = require("fs");
-var PodSpecBump = require("../lib/podspec-bump");
+var PodSpecBump = require("../lib/podspec-bumper");
 describe("podspec-bump-test", function () {
     var filePath = __dirname + "/fixtures/example.podspec";
     var majorUpdatedFilePath = __dirname + "/fixtures/major-updated.podspec";
@@ -22,6 +22,11 @@ describe("podspec-bump-test", function () {
         context("when no args", function () {
             it("should return 0.1.1 patch version", function () {
                 assert.equal(podspecBumper.incrementVersion(), "0.1.1");
+            });
+        });
+        context("when specific version", function () {
+            it("should return specific version", function () {
+                assert.equal(podspecBumper.incrementVersion("1.2.3"), "1.2.3");
             });
         });
         context("when minor update", function () {
