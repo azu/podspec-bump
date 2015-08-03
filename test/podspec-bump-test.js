@@ -17,6 +17,13 @@ describe("podspec-bump-test", function () {
         it("should return 0.1.0", function () {
             assert.equal(podspecBumper.getVersion(), "0.1.0");
         });
+        context("when podspec is in a different format", function () {
+            it("should return 3.1.0", function () {
+                var differentPodspecPath = __dirname + "/fixtures/example-different-format.podspec";
+                var format2PodspecBumper = new PodSpecBump(differentPodspecPath);
+                assert.equal(format2PodspecBumper.getVersion(), "3.1.0");
+            });
+        });
     });
     describe("#incrementVersion", function () {
         context("when no args", function () {
