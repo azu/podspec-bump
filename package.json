@@ -21,13 +21,13 @@
     "url": "https://github.com/azu/podspec-bump/issues"
   },
   "devDependencies": {
-    "espower-loader": "^0.8.0",
-    "intelli-espower-loader": "^0.3.0",
-    "mocha": "^1.21.4",
+    "espower-loader": "^1.2.2",
+    "intelli-espower-loader": "^1.1.0",
+    "mocha": "^8.3.2",
     "power-assert": "^0.8.0"
   },
   "dependencies": {
     "optionator": "^0.4.0",
-    "semver": "^3.0.1"
+    "semver": "^7.3.5"
   }
 }
